@@ -1,103 +1,95 @@
 import Image from "next/image";
+import Link from "next/link";
+
+function BenefitCard({
+  imgSrc,
+  head,
+  body,
+}: {
+  imgSrc: string;
+  head: string;
+  body: string;
+}) {
+  return (
+    <div className="bg-brand-primary-normal flex flex-col items-center max-w-lg p-5 gap-5">
+      <Image width={500} height={200} src={imgSrc} alt="" />
+      <div className="text-white flex flex-col justify-center">
+        <p className="text-lg font-[600]">{head}</p>
+        <p>{body}</p>
+      </div>
+    </div>
+  );
+}
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <>
+      <div className="relative min-h-[90svh] bg-[url('/landing.png')] bg-cover flex items-center p-14">
+        <div className="absolute inset-0 bg-black opacity-50"></div>
+        <div className="z-10 flex flex-col gap-3 max-w-1/2">
+          <h1 className="text-6xl text-white leading-tight">
+            Empowering the Deaf, Building Inclusive Communities
+          </h1>
+          <p className="text-white text-lg">
+            Offering vital resources and advocating for the rights of Deaf
+            individuals to thrive
+          </p>
+          <Link href="" className="bg-white px-7 py-3 rounded self-start">
+            Learn More
+          </Link>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+      </div>
+      <div className="flex flex-col items-center justify-center p-14 gap-10">
+        <h2 className="text-5xl max-w-1/2 text-center text-brand-primary-dark">
+          Building Futures Through The Difference We Make
+        </h2>
+        <div className="grid grid-cols-3 gap-10">
+          <BenefitCard
+            imgSrc="/placeholder1.png"
+            head="Empowering Through Education"
+            body="We cultivate adult literacy in English Sign Language and provide vital academic support for Deaf students."
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+          <BenefitCard
+            imgSrc="/placeholder1.png"
+            head="Championing Deaf Rights"
+            body="We cultivate adult literacy in English Sign Language and provide vital academic support for Deaf students."
           />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
+          <BenefitCard
+            imgSrc="/placeholder1.png"
+            head="Bridging Communication Gaps"
+            body="Facilitate communication through interpreter training and student support for Deaf inclusion"
           />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        </div>
+      </div>
+      <div className="bg-brand-secondary-normal p-15">
+        <div className="flex bg-white rounded-xl p-10 bg-[url('/call-to-action-bg.svg')] bg-cover">
+          <div className="w-full flex flex-col justify-center gap-5">
+            <div className="flex flex-col gap-2">
+              <h2 className="text-brand-primary-dark text-4xl">
+                Our Driving Force
+              </h2>
+              <p className="text-brand-primary-dark">
+                Understand the driving force behind Deaf Inclusion and
+                Development Initiative.
+              </p>
+            </div>
+            <Link
+              href={""}
+              className="px-7 py-3 bg-brand-primary-normal text-white self-start rounded"
+            >
+              Our Story & Objectives
+            </Link>
+          </div>
+          <div className="w-full rounded-xl overflow-clip">
+            <Image
+              width={1920}
+              height={1080}
+              src={"/call-to-action.png"}
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
