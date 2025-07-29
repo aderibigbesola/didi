@@ -1,7 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
 @import "tailwindcss";
 
 @theme {
   --color-brand-primary-normal: #21497a;
   --color-brand-primary-dark: #162e4c;
   --color-brand-secondary-normal: #f7e9d0;
+}
+
+body{
+  font-family: "Manrope"
+}
+
+details summary::marker {
+  content: "";
+}
+
+/* For Webkit browsers (Chrome, Safari, Edge) */
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+#nav-menu {
+  & #nav-menu-x {
+    display: none;
+  }
+}
+#nav-menu[open] {
+  & #nav-menu-burger {
+    display: none;
+  }
+  & #nav-menu-x {
+    display: flex;
+  }
 }
