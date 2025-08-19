@@ -60,20 +60,20 @@ export default function Home() {
         </h2>
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-3">
           <BenefitCard
-            imgSrc="/placeholder1.png"
-            imgSrc2="/placeholder2.png"
+            imgSrc={`${process.env.PAGES_BASE_PATH || ""}/placeholder1.png`}
+            imgSrc2={`${process.env.PAGES_BASE_PATH || ""}/placeholder2.png`}
             head="Empowering Through Education"
             body="We cultivate adult literacy in English Sign Language and provide vital academic support for Deaf students."
           />
           <BenefitCard
-            imgSrc="/placeholder1.png"
-            imgSrc2="/placeholder2.png"
+            imgSrc={`${process.env.PAGES_BASE_PATH || ""}/placeholder1.png`}
+            imgSrc2={`${process.env.PAGES_BASE_PATH || ""}/placeholder2.png`}
             head="Championing Deaf Rights"
             body="We cultivate adult literacy in English Sign Language and provide vital academic support for Deaf students."
           />
           <BenefitCard
-            imgSrc="/placeholder1.png"
-            imgSrc2="/placeholder2.png"
+            imgSrc={`${process.env.PAGES_BASE_PATH || ""}/placeholder1.png`}
+            imgSrc2={`${process.env.PAGES_BASE_PATH || ""}/placeholder2.png`}
             head="Bridging Communication Gaps"
             body="Facilitate communication through interpreter training and student support for Deaf inclusion"
           />
@@ -103,14 +103,14 @@ export default function Home() {
               className="hidden lg:block"
               width={1920}
               height={1080}
-              src={"/call-to-action.png"}
+              src={`${process.env.PAGES_BASE_PATH || ""}/call-to-action.png`}
               alt=""
             />
             <Image
               className="block lg:hidden"
               width={720}
               height={500}
-              src={"/call-to-action-s.png"}
+              src={`${process.env.PAGES_BASE_PATH || ""}/call-to-action-s.png`}
               alt=""
             />
           </div>

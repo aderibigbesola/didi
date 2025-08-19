@@ -21,7 +21,12 @@ export default function RootLayout({
       <body>
         <header className="fixed z-100 flex h-15 w-svw items-center justify-between bg-white px-7 shadow lg:px-14">
           <Link href="/" className="lg:w-full" onNavigate={handleClick}>
-            <Image width={150} height={200} src="/logo.svg" alt="Logo" />
+            <Image
+              width={150}
+              height={200}
+              src={`${process.env.PAGES_BASE_PATH || ""}/logo.svg`}
+              alt="Logo"
+            />
           </Link>
           <nav className="mx-auto hidden w-full items-center justify-center gap-12 lg:flex">
             <Link href="/about">About</Link>
@@ -96,7 +101,12 @@ export default function RootLayout({
         <main className="pt-15">{children}</main>
         <footer className="bg-brand-primary-dark relative grid w-svw grid-cols-3 gap-4 px-7 py-10 text-white lg:grid-cols-4 lg:px-14">
           <div className="flex flex-col gap-4">
-            <Image width={150} height={200} src="/logo.svg" alt="Logo" />
+            <Image
+              width={150}
+              height={200}
+              src={`${process.env.PAGES_BASE_PATH || ""}/logo.svg`}
+              alt="Logo"
+            />
             <div className="flex flex-col">
               <p className="text-xl lg:text-2xl">Fostering </p>
               <p className="text-xl lg:text-2xl">Deaf </p>

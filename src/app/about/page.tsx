@@ -28,7 +28,7 @@ export default function About() {
             <h2 className="bg-brand-secondary-normal absolute top-0 px-4 py-2 text-black">
               MISSION
             </h2>
-            <Image height={15} width={15} src="/about-icon-white.svg" alt="" />
+            <Image height={15} width={15} src={`${process.env.PAGES_BASE_PATH || ''}/about-icon-white.svg`} alt="" />
             <p>
               Build a world where Deaf individuals have equal access to
               opportunities, where their unique skills and talents are
@@ -45,7 +45,7 @@ export default function About() {
             <h2 className="bg-brand-primary-normal absolute top-0 px-4 py-2 text-white">
               VISION
             </h2>
-            <Image height={15} width={15} src="/about-icon-black.svg" alt="" />
+            <Image height={15} width={15} src={`${process.env.PAGES_BASE_PATH || ''}/about-icon-black.svg`} alt="" />
             <p>
               Empower Deaf individuals by fostering inclusion, promoting
               entrepreneurship, and leveraging technology to create
@@ -108,7 +108,7 @@ export default function About() {
           <h2 className="bg-brand-secondary-normal absolute top-0 px-4 py-2 text-black">
             FOUNDER
           </h2>
-          <Image height={15} width={15} src="/about-icon-white.svg" alt="" />
+          <Image height={15} width={15} src={`${process.env.PAGES_BASE_PATH || ''}/about-icon-white.svg`} alt="" />
           <p>
             Build a world where Deaf individuals have equal access to
             opportunities, where their unique skills and talents are recognized

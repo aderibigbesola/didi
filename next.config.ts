@@ -1,14 +1,14 @@
 import type { NextConfig } from "next";
 
+const isProd = process.env.NODE_ENV === "production";
+
 const nextConfig: NextConfig = {
-  /* config options here */
+  basePath: isProd ? "/didi" : "",
+  assetPrefix: isProd ? "/didi" : "",
   output: "export", // <=== enables static exports
-  basePath: "/didi",
-  assetPrefix: "/didi/",
   reactStrictMode: true,
   images: {
-    unoptimized: true,
+    unoptimized: true, // Optional: Use this if you're hosting images statically
   },
 };
-
 export default nextConfig;
