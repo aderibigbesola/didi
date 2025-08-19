@@ -25,6 +25,7 @@ export default function RootLayout({
           </Link>
           <nav className="mx-auto hidden w-full items-center justify-center gap-12 lg:flex">
             <Link href="/about">About</Link>
+            <Link href="/programs">Programs</Link>
           </nav>
           <div className="hidden w-full items-center justify-end lg:flex">
             <Link
@@ -73,6 +74,13 @@ export default function RootLayout({
                   onNavigate={handleClick}
                 >
                   About
+                </Link>
+                <Link
+                  href="/programs"
+                  className="text-2xl"
+                  onNavigate={handleClick}
+                >
+                  Programs
                 </Link>
                 <Link
                   href="/contact-us"
