@@ -63,7 +63,7 @@ export default function Home() {
         </div>
       </div>
       <div className="flex flex-col items-center justify-center gap-10 p-7 lg:p-14">
-        <h2 className="text-brand-primary-dark text-4xl lg:max-w-1/2 lg:text-center lg:text-5xl">
+        <h2 className="text-brand-primary-dark text-4xl lg:max-w-1/2 lg:text-center lg:text-5xl leading-normal">
           Building Futures Through The Difference We Make
         </h2>
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-3">

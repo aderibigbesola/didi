@@ -22,7 +22,7 @@ export default function RootLayout({
         <title>DIDI</title>
       </head>
       <body>
-        <header className="fixed z-100 flex h-15 w-svw items-center justify-between bg-white px-7 shadow lg:px-14">
+        <header className="fixed z-100 flex h-15 w-svw items-center justify-between bg-white px-7 py-9 shadow lg:px-14">
           <Link href="/" className="lg:w-full" onNavigate={handleClick}>
             <Image
               width={150}
@@ -38,7 +38,7 @@ export default function RootLayout({
           <div className="hidden w-full items-center justify-end lg:flex">
             <Link
               href="/contact-us"
-              className="bg-brand-primary-normal rounded px-7 py-3 text-white"
+              className="bg-brand-primary-normal rounded px-5 py-2 text-white"
             >
               Contact us
             </Link>
