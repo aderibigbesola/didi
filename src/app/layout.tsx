@@ -20,6 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <title>DIDI</title>
+        <link rel="icon" href="/favicon.png" />
       </head>
       <body>
         <header className="fixed z-100 flex h-15 w-svw items-center justify-between bg-white px-7 py-9 shadow lg:px-14">
@@ -32,13 +33,17 @@ export default function RootLayout({
             />
           </Link>
           <nav className="mx-auto hidden w-full items-center justify-center gap-12 lg:flex">
-            <Link href="/about">About</Link>
-            <Link href="/programs">Programs</Link>
+            <Link href="/about" className="hover:underline">
+              About
+            </Link>
+            <Link href="/programs" className="hover:underline">
+              Programs
+            </Link>
           </nav>
           <div className="hidden w-full items-center justify-end lg:flex">
             <Link
               href="/contact-us"
-              className="bg-brand-primary-normal rounded px-5 py-2 text-white"
+              className="bg-brand-primary-normal rounded px-5 py-2 text-white transition hover:bg-black"
             >
               Contact us
             </Link>

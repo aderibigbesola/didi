@@ -18,7 +18,7 @@ export default function BreadCrumb() {
   return (
     <>
       <nav className="flex gap-2">
-        <Link href={"/"} className="text-gray-500">
+        <Link href={"/"} className="text-gray-500 hover:underline">
           Home
         </Link>
         <p>/</p>
@@ -32,7 +32,7 @@ export default function BreadCrumb() {
                 <>
                   <Link
                     href={"/" + paths.slice(0, index + 1).join("/")}
-                    className="text-gray-500"
+                    className="text-gray-500 hover:underline"
                   >
                     {path}
                   </Link>

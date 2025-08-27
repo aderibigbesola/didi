@@ -57,13 +57,16 @@ export default function Home() {
             Offering vital resources and advocating for the rights of Deaf
             individuals to thrive
           </p>
-          <Link href="" className="self-start rounded bg-white px-7 py-3">
+          <Link
+            href="/programs"
+            className="hover:bg-brand-primary-normal self-start rounded bg-white px-7 py-3 transition hover:text-white"
+          >
             Learn More
           </Link>
         </div>
       </div>
       <div className="flex flex-col items-center justify-center gap-10 p-7 lg:p-14">
-        <h2 className="text-brand-primary-dark text-4xl lg:max-w-1/2 lg:text-center lg:text-5xl leading-normal">
+        <h2 className="text-brand-primary-dark text-4xl leading-normal lg:max-w-1/2 lg:text-center lg:text-5xl">
           Building Futures Through The Difference We Make
         </h2>
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-3">
@@ -100,8 +103,8 @@ export default function Home() {
               </p>
             </div>
             <Link
-              href={""}
-              className="bg-brand-primary-normal self-center rounded px-7 py-3 text-white lg:self-start"
+              href={"/about"}
+              className="bg-brand-primary-normal self-center rounded px-7 py-3 text-white transition hover:bg-black lg:self-start"
             >
               Our Story & Objectives
             </Link>

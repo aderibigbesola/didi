@@ -7,9 +7,10 @@ const basePath = nextConfig.basePath;
 export default function ContactUs() {
   return (
     <>
-      <div className="flex flex-col lg:flex-row">
+      <div className="flex h-svh flex-col lg:flex-row">
         <div className="bg-brand-secondary-normal flex flex-col gap-4 p-14 lg:w-1/2">
           <BreadCrumb />
+          {/*TODO: Setup Email*/}
           <form className="flex flex-col gap-8" method="POST">
             <div className="flex flex-col gap-2">
               <label htmlFor="email">Email</label>
@@ -44,7 +45,7 @@ export default function ContactUs() {
                 id="message"
               ></textarea>
             </div>
-            <button className="bg-brand-primary-normal resize-none p-4 text-white">
+            <button className="bg-brand-primary-normal resize-none rounded p-4 text-white transition hover:bg-black">
               Send
             </button>
           </form>
