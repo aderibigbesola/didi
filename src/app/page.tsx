@@ -42,7 +42,12 @@ function BenefitCard({
 export default function Home() {
   return (
     <>
-      <div className="relative flex min-h-[60svh] items-center bg-[url('/landing.png')] bg-cover p-7 lg:min-h-[95svh] lg:p-14">
+      <div
+        className={`relative flex min-h-[60svh] items-center bg-cover p-7 lg:min-h-[95svh] lg:p-14`}
+        style={{
+          backgroundImage: `url('${basePath}/landing.png')`,
+        }}
+      >
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="z-10 flex flex-col gap-3 md:max-w-2/3 lg:max-w-1/2">
           <h1 className="text-4xl leading-tight text-white md:text-5xl lg:text-6xl">
