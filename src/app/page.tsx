@@ -1,5 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
+import nextConfig from "../../next.config";
+
+const basePath = nextConfig.basePath;
 
 function BenefitCard({
   imgSrc,
@@ -60,20 +63,20 @@ export default function Home() {
         </h2>
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-3">
           <BenefitCard
-            imgSrc={`${process.env.PAGES_BASE_PATH || ""}/placeholder1.png`}
-            imgSrc2={`${process.env.PAGES_BASE_PATH || ""}/placeholder2.png`}
+            imgSrc={`${basePath}/index-empowering.png`}
+            imgSrc2={`${basePath}/index-empowering-mobile.png`}
             head="Empowering Through Education"
             body="We cultivate adult literacy in English Sign Language and provide vital academic support for Deaf students."
           />
           <BenefitCard
-            imgSrc={`${process.env.PAGES_BASE_PATH || ""}/placeholder1.png`}
-            imgSrc2={`${process.env.PAGES_BASE_PATH || ""}/placeholder2.png`}
+            imgSrc={`${basePath}/index-championing.png`}
+            imgSrc2={`${basePath}/index-championing-mobile.png`}
             head="Championing Deaf Rights"
             body="We cultivate adult literacy in English Sign Language and provide vital academic support for Deaf students."
           />
           <BenefitCard
-            imgSrc={`${process.env.PAGES_BASE_PATH || ""}/placeholder1.png`}
-            imgSrc2={`${process.env.PAGES_BASE_PATH || ""}/placeholder2.png`}
+            imgSrc={`${basePath}/index-bridging.png`}
+            imgSrc2={`${basePath}/index-bridging-mobile.png`}
             head="Bridging Communication Gaps"
             body="Facilitate communication through interpreter training and student support for Deaf inclusion"
           />
@@ -103,14 +106,14 @@ export default function Home() {
               className="hidden lg:block"
               width={1920}
               height={1080}
-              src={`${process.env.PAGES_BASE_PATH || ""}/call-to-action.png`}
+              src={`${basePath}/call-to-action.png`}
               alt=""
             />
             <Image
               className="block lg:hidden"
               width={720}
               height={500}
-              src={`${process.env.PAGES_BASE_PATH || ""}/call-to-action-s.png`}
+              src={`${basePath}/call-to-action-s.png`}
               alt=""
             />
           </div>

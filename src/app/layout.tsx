@@ -2,6 +2,9 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import nextConfig from "../../next.config";
+
+const basePath = nextConfig.basePath;
 import "./globals.css";
 
 const handleClick = () => {
@@ -24,7 +27,7 @@ export default function RootLayout({
             <Image
               width={150}
               height={200}
-              src={`${process.env.PAGES_BASE_PATH || ""}/logo.svg`}
+              src={`${basePath}/logo.svg`}
               alt="Logo"
             />
           </Link>
@@ -104,7 +107,7 @@ export default function RootLayout({
             <Image
               width={150}
               height={200}
-              src={`${process.env.PAGES_BASE_PATH || ""}/logo.svg`}
+              src={`${basePath}/logo.svg`}
               alt="Logo"
             />
             <div className="flex flex-col">

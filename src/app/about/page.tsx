@@ -1,14 +1,17 @@
 import Image from "next/image";
+import nextConfig from "../../../next.config";
+
+const basePath = nextConfig.basePath;
 
 import BreadCrumb from "../components/BreadCrumb";
 
 export default function About() {
   return (
     <>
-      <div className="flex flex-col gap-10 bg-gray-300 p-7 lg:p-14">
+      <div className="flex flex-col gap-10 bg-blue-100 px-7 py-10 lg:px-14 lg:py-30">
         <BreadCrumb />
         <div className="flex flex-col gap-7 lg:flex-row">
-          <h1 className="text-brand-primary-dark text-5xl lg:w-1/2">
+          <h1 className="text-brand-primary-dark text-5xl font-bold lg:w-1/2">
             Our journey towards inclusivity
           </h1>
           <p className="lg:w-1/2">
@@ -24,12 +27,17 @@ export default function About() {
       </div>
       <div className="">
         <div className="flex flex-col md:flex-row">
-          <div className="bg-brand-primary-normal relative px-7 py-30 text-white md:w-2/3 lg:px-20 lg:py-56">
+          <div className="bg-brand-primary-normal relative flex w-full flex-col justify-center gap-2 px-7 py-20 text-white lg:px-20 lg:py-54">
             <h2 className="bg-brand-secondary-normal absolute top-0 px-4 py-2 text-black">
               MISSION
             </h2>
-            <Image height={15} width={15} src={`${process.env.PAGES_BASE_PATH || ''}/about-icon-white.svg`} alt="" />
-            <p>
+            <Image
+              height={15}
+              width={15}
+              src={`${basePath}/about-icon-white.svg`}
+              alt=""
+            />
+            <p className="text-xl font-bold">
               Build a world where Deaf individuals have equal access to
               opportunities, where their unique skills and talents are
               recognized and celebrated, and where barriers to their full
@@ -37,16 +45,49 @@ export default function About() {
               creating a more inclusive and equitable society for all
             </p>
           </div>
-          <div className="md:w-1/3"></div>
+          <div className="relative md:w-9/10 lg:w-2/3">
+            <Image
+              fill
+              src={`${basePath}/about-mission.png`}
+              alt=""
+              className="hidden md:block"
+            />
+            <Image
+              width={1920}
+              height={1080}
+              src={`${basePath}/about-mission-mobile.png`}
+              alt=""
+              className="block md:hidden"
+            />
+          </div>
         </div>
-        <div className="flex flex-col md:flex-row">
-          <div className="md:w-1/3"></div>
-          <div className="bg-brand-secondary-normal relative px-7 py-30 md:w-2/3 lg:px-20 lg:py-56">
+        <div className="flex flex-col-reverse md:flex-row">
+          <div className="relative md:w-9/10 lg:w-2/3">
+            <Image
+              fill
+              src={`${basePath}/about-vision.png`}
+              className="hidden md:block"
+              alt=""
+            />
+            <Image
+              width={1920}
+              height={1080}
+              src={`${basePath}/about-vision-mobile.png`}
+              alt=""
+              className="block md:hidden"
+            />
+          </div>
+          <div className="bg-brand-secondary-normal relative flex w-full flex-col justify-center gap-2 px-7 py-20 lg:px-20 lg:py-54">
             <h2 className="bg-brand-primary-normal absolute top-0 px-4 py-2 text-white">
               VISION
             </h2>
-            <Image height={15} width={15} src={`${process.env.PAGES_BASE_PATH || ''}/about-icon-black.svg`} alt="" />
-            <p>
+            <Image
+              height={15}
+              width={15}
+              src={`${basePath}/about-icon-black.svg`}
+              alt=""
+            />
+            <p className="text-xl font-bold">
               Empower Deaf individuals by fostering inclusion, promoting
               entrepreneurship, and leveraging technology to create
               opportunities for their advancement and integration into society
@@ -61,8 +102,10 @@ export default function About() {
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
           <div className="bg-brand-primary-normal flex flex-col gap-20 rounded-lg px-5 py-10 text-white">
             <div>
-              <p className="text-xl">01.</p>
-              <p className="text-xl">Empowerment Through Literacy & Skills</p>
+              <p className="text-xl font-bold">01.</p>
+              <p className="text-xl font-bold">
+                Empowerment Through Literacy & Skills
+              </p>
             </div>
             <p>
               Providing English Sign Language literacy and vocational training
@@ -71,8 +114,10 @@ export default function About() {
           </div>
           <div className="bg-brand-primary-normal flex flex-col gap-20 rounded-lg px-5 py-10 text-white">
             <div>
-              <p className="text-xl">02.</p>
-              <p className="text-xl">Advocating for Deaf Rights & Awareness</p>
+              <p className="text-xl font-bold">02.</p>
+              <p className="text-xl font-bold">
+                Advocating for Deaf Rights & Awareness
+              </p>
             </div>
             <p>
               Championing the rights of the deaf community and disseminating
@@ -81,8 +126,10 @@ export default function About() {
           </div>
           <div className="bg-brand-primary-normal flex flex-col gap-20 rounded-lg px-5 py-10 text-white">
             <div>
-              <p className="text-xl">03.</p>
-              <p className="text-xl">Developing Sign Language Capacity</p>
+              <p className="text-xl font-bold">03.</p>
+              <p className="text-xl font-bold">
+                Developing Sign Language Capacity
+              </p>
             </div>
             <p>
               Training Sign Language Interpreters and offering tutorials and
@@ -91,8 +138,8 @@ export default function About() {
           </div>
           <div className="bg-brand-primary-normal flex flex-col gap-20 rounded-lg px-5 py-10 text-white">
             <div>
-              <p className="text-xl">04.</p>
-              <p className="text-xl">
+              <p className="text-xl font-bold">04.</p>
+              <p className="text-xl font-bold">
                 Establishing Dedicated Deaf Education Centers
               </p>
             </div>
@@ -103,21 +150,40 @@ export default function About() {
           </div>
         </div>
       </div>
-      <div className="flex">
-        <div className="bg-brand-primary-normal relative px-7 py-56 text-white md:w-3/5 lg:px-20">
+      <div className="flex flex-col md:flex-row">
+        <div className="bg-brand-primary-normal relative flex w-full flex-col gap-4 px-7 pt-20 pb-10 text-white lg:px-20 lg:py-54">
           <h2 className="bg-brand-secondary-normal absolute top-0 px-4 py-2 text-black">
             FOUNDER
           </h2>
-          <Image height={15} width={15} src={`${process.env.PAGES_BASE_PATH || ''}/about-icon-white.svg`} alt="" />
-          <p>
+          <Image
+            height={15}
+            width={15}
+            src={`${basePath}/about-icon-white.svg`}
+            alt=""
+          />
+          <p className="text-xl font-bold">
             Build a world where Deaf individuals have equal access to
             opportunities, where their unique skills and talents are recognized
             and celebrated, and where barriers to their full participation in
             entrepreneurship and technology are dismantled, creating a more
             inclusive and equitable society for all
           </p>
+          <Image
+            width={700}
+            height={500}
+            src={`${basePath}/about-founder-mobile.png`}
+            alt=""
+            className="block md:hidden"
+          />
         </div>
-        <div className="md:w-2/5"></div>
+        <div className="relative md:w-9/10 lg:w-2/3">
+          <Image
+            fill={true}
+            src={`${basePath}/about-founder.png`}
+            alt=""
+            className="hidden md:block"
+          />
+        </div>
       </div>
     </>
   );
