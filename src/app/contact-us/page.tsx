@@ -10,10 +10,7 @@ export default function ContactUs() {
       <div className="flex flex-col lg:flex-row">
         <div className="bg-brand-secondary-normal flex flex-col gap-4 p-14 lg:w-1/2">
           <BreadCrumb />
-          <form
-            className="flex flex-col gap-8"
-            method="POST"
-          >
+          <form className="flex flex-col gap-8" method="POST">
             <div className="flex flex-col gap-2">
               <label htmlFor="email">Email</label>
               <input
@@ -53,7 +50,7 @@ export default function ContactUs() {
           </form>
         </div>
         <div className="relative lg:w-1/2">
-          <Image fill={true} src={`${basePath}/contact-us.png`} alt="Logo" />
+          <Image fill={true} src={`${basePath}/contact-us.png`} alt="" />
         </div>
       </div>
     </>
