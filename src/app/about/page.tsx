@@ -162,11 +162,14 @@ export default function About() {
             alt=""
           />
           <p className="text-xl font-bold">
-            Build a world where Deaf individuals have equal access to
-            opportunities, where their unique skills and talents are recognized
-            and celebrated, and where barriers to their full participation in
-            entrepreneurship and technology are dismantled, creating a more
-            inclusive and equitable society for all
+            Aderibigbe Oluwasola is a seasoned administrator with a deep passion
+            for advancing the fundamental rights of Persons with Disabilities.
+            He is a committed Disability Inclusion Advocate, Author, and Tech
+            Enthusiast, dedicated to creating opportunities that foster
+            accessibility and empowerment. As the Founder and Executive Director
+            of the Deaf Inclusion and Development Initiative (DIDI), he
+            continues to champion innovative solutions and drive impactful
+            programs that promote equity, inclusion, and development for all.
           </p>
           <Image
             width={700}
