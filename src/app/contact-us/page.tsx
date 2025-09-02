@@ -1,13 +1,27 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import BreadCrumb from "../components/BreadCrumb";
 import Image from "next/image";
 import nextConfig from "../../../next.config";
 
 const basePath = nextConfig.basePath;
 
+function currentURL() {
+  const [currentUrl, setCurrentUrl] = useState("");
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setCurrentUrl(window.location.href);
+    }
+  }, []);
+
+  return currentUrl;
+}
 export default function ContactUs() {
   return (
     <>
-      <div className="flex h-svh flex-col lg:flex-row">
+      <div className="flex min-h-svh flex-col lg:flex-row">
         <div className="bg-brand-secondary-normal flex flex-col gap-4 p-14 lg:w-1/2">
           <BreadCrumb />
           {/*TODO: Setup Email*/}
@@ -16,6 +30,7 @@ export default function ContactUs() {
             method="POST"
             action="https://formsubmit.co/Aderibigbesola@gmail.com"
           >
+            <input type="hidden" name="_next" value={currentURL()} />
             <div className="flex flex-col gap-2">
               <label htmlFor="email">Email</label>
               <input
