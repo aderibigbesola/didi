@@ -11,7 +11,11 @@ export default function ContactUs() {
         <div className="bg-brand-secondary-normal flex flex-col gap-4 p-14 lg:w-1/2">
           <BreadCrumb />
           {/*TODO: Setup Email*/}
-          <form className="flex flex-col gap-8" method="POST">
+          <form
+            className="flex flex-col gap-8"
+            method="POST"
+            action="https://formsubmit.co/Aderibigbesola@gmail.com"
+          >
             <div className="flex flex-col gap-2">
               <label htmlFor="email">Email</label>
               <input

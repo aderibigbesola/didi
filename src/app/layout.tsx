@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <title>DIDI</title>
-        <link rel="icon" href="/favicon.png" />
+        <link rel="icon" href={`${basePath}/favicon.png`} />
       </head>
       <body>
         <header className="fixed z-100 flex h-15 w-svw items-center justify-between bg-white px-7 py-9 shadow lg:px-14">
