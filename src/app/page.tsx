@@ -1,8 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import nextConfig from "../../next.config";
-
-const basePath = nextConfig.basePath;
 
 function BenefitCard({
   imgSrc,
@@ -45,7 +42,7 @@ export default function Home() {
       <div
         className={`relative flex min-h-[60svh] items-center bg-cover p-7 lg:min-h-[95svh] lg:p-14`}
         style={{
-          backgroundImage: `url('${basePath}/landing.png')`,
+          backgroundImage: "url('/landing.png')",
         }}
       >
         <div className="absolute inset-0 bg-black opacity-50"></div>
@@ -71,20 +68,20 @@ export default function Home() {
         </h2>
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-3">
           <BenefitCard
-            imgSrc={`${basePath}/index-empowering.png`}
-            imgSrc2={`${basePath}/index-empowering-mobile.png`}
+            imgSrc={"/index-empowering.png"}
+            imgSrc2={"/index-empowering-mobile.png"}
             head="Empowering Through Education"
             body="We cultivate adult literacy in English Sign Language and provide vital academic support for Deaf students."
           />
           <BenefitCard
-            imgSrc={`${basePath}/index-championing.png`}
-            imgSrc2={`${basePath}/index-championing-mobile.png`}
+            imgSrc={"/index-championing.png"}
+            imgSrc2={"/index-championing-mobile.png"}
             head="Championing Deaf Rights"
             body="We cultivate adult literacy in English Sign Language and provide vital academic support for Deaf students."
           />
           <BenefitCard
-            imgSrc={`${basePath}/index-bridging.png`}
-            imgSrc2={`${basePath}/index-bridging-mobile.png`}
+            imgSrc={"/index-bridging.png"}
+            imgSrc2={"/index-bridging-mobile.png"}
             head="Bridging Communication Gaps"
             body="Facilitate communication through interpreter training and student support for Deaf inclusion"
           />
@@ -114,14 +111,14 @@ export default function Home() {
               className="hidden lg:block"
               width={1920}
               height={1080}
-              src={`${basePath}/call-to-action.png`}
+              src={"/call-to-action.png"}
               alt=""
             />
             <Image
               className="block lg:hidden"
               width={720}
               height={500}
-              src={`${basePath}/call-to-action-s.png`}
+              src={"/call-to-action-s.png"}
               alt=""
             />
           </div>

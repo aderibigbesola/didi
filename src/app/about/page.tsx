@@ -1,7 +1,4 @@
 import Image from "next/image";
-import nextConfig from "../../../next.config";
-
-const basePath = nextConfig.basePath;
 
 import BreadCrumb from "../components/BreadCrumb";
 
@@ -34,7 +31,7 @@ export default function About() {
             <Image
               height={15}
               width={15}
-              src={`${basePath}/about-icon-white.svg`}
+              src={"/about-icon-white.svg"}
               alt=""
             />
             <p className="text-xl font-bold">
@@ -48,14 +45,14 @@ export default function About() {
           <div className="relative md:w-9/10 lg:w-2/3">
             <Image
               fill
-              src={`${basePath}/about-mission.png`}
+              src={"/about-mission.png"}
               alt=""
               className="hidden md:block"
             />
             <Image
               width={1920}
               height={1080}
-              src={`${basePath}/about-mission-mobile.png`}
+              src={"/about-mission-mobile.png"}
               alt=""
               className="block md:hidden"
             />
@@ -65,14 +62,14 @@ export default function About() {
           <div className="relative md:w-9/10 lg:w-2/3">
             <Image
               fill
-              src={`${basePath}/about-vision.png`}
+              src={"/about-vision.png"}
               className="hidden md:block"
               alt=""
             />
             <Image
               width={1920}
               height={1080}
-              src={`${basePath}/about-vision-mobile.png`}
+              src={"/about-vision-mobile.png"}
               alt=""
               className="block md:hidden"
             />
@@ -84,7 +81,7 @@ export default function About() {
             <Image
               height={15}
               width={15}
-              src={`${basePath}/about-icon-black.svg`}
+              src={"/about-icon-black.svg"}
               alt=""
             />
             <p className="text-xl font-bold">
@@ -158,7 +155,7 @@ export default function About() {
           <Image
             height={15}
             width={15}
-            src={`${basePath}/about-icon-white.svg`}
+            src={"/about-icon-white.svg"}
             alt=""
           />
           <p className="text-xl font-bold">
@@ -174,7 +171,7 @@ export default function About() {
           <Image
             width={700}
             height={500}
-            src={`${basePath}/about-founder-mobile.png`}
+            src={"/about-founder-mobile.png"}
             alt=""
             className="block md:hidden"
           />
@@ -182,7 +179,7 @@ export default function About() {
         <div className="relative md:w-9/10 lg:w-2/3">
           <Image
             fill={true}
-            src={`${basePath}/about-founder.png`}
+            src={"/about-founder.png"}
             alt=""
             className="hidden md:block"
           />

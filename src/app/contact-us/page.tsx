@@ -3,11 +3,8 @@
 import { useEffect, useState } from "react";
 import BreadCrumb from "../components/BreadCrumb";
 import Image from "next/image";
-import nextConfig from "../../../next.config";
 
-const basePath = nextConfig.basePath;
-
-function currentURL() {
+export default function ContactUs() {
   const [currentUrl, setCurrentUrl] = useState("");
 
   useEffect(() => {
@@ -16,9 +13,6 @@ function currentURL() {
     }
   }, []);
 
-  return currentUrl;
-}
-export default function ContactUs() {
   return (
     <>
       <div className="flex min-h-svh flex-col lg:flex-row">
@@ -30,7 +24,7 @@ export default function ContactUs() {
             method="POST"
             action="https://formsubmit.co/Aderibigbesola@gmail.com"
           >
-            <input type="hidden" name="_next" value={currentURL()} />
+            <input type="hidden" name="_next" value={currentUrl} />
             <div className="flex flex-col gap-2">
               <label htmlFor="email">Email</label>
               <input
@@ -70,7 +64,7 @@ export default function ContactUs() {
           </form>
         </div>
         <div className="relative lg:w-1/2">
-          <Image fill={true} src={`${basePath}/contact-us.png`} alt="" />
+          <Image fill={true} src={"/contact-us.png"} alt="" />
         </div>
       </div>
     </>

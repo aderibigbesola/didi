@@ -1,10 +1,8 @@
 import type { NextConfig } from "next";
 
-const isProd = process.env.NODE_ENV === "production";
-
 const nextConfig: NextConfig = {
-  basePath: isProd ? "/didi" : "",
-  assetPrefix: isProd ? "/didi" : "",
+  basePath: "",
+  assetPrefix: "",
   output: "export", // <=== enables static exports
   reactStrictMode: true,
   images: {
