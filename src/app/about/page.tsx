@@ -12,13 +12,13 @@ export default function About() {
             Our journey towards inclusivity
           </h1>
           <p className="lg:w-1/2">
-            At Deaf Inclusion, we believe in a world where every individual,
-            regardless of their abilities, has the opportunity to thrive and
-            contribute meaningfully to society. Our initiative is dedicated to
-            championing the rights and inclusion of the Deaf community, paving
-            the way for their integration into every aspect of life – from the
-            comfort of their homes to active participation in the broader
-            societal landscape
+            At Deaf Inclusion and Development Initiative, we believe in a world
+            where every individual, regardless of their abilities, has the
+            opportunity to thrive and contribute meaningfully to society. Our
+            initiative is dedicated to championing the rights and inclusion of
+            the Deaf community, paving the way for their integration into every
+            aspect of life – from the comfort of their homes to active
+            participation in the broader societal landscape
           </p>
         </div>
       </div>
@@ -152,12 +152,7 @@ export default function About() {
           <h2 className="bg-brand-secondary-normal absolute top-0 px-4 py-2 text-black">
             FOUNDER
           </h2>
-          <Image
-            height={15}
-            width={15}
-            src={"/about-icon-white.svg"}
-            alt=""
-          />
+          <Image height={15} width={15} src={"/about-icon-white.svg"} alt="" />
           <p className="text-xl font-bold">
             Aderibigbe Oluwasola is a seasoned administrator with a deep passion
             for advancing the fundamental rights of Persons with Disabilities.
@@ -176,7 +171,7 @@ export default function About() {
             className="block md:hidden"
           />
         </div>
-        <div className="relative md:w-9/10 lg:w-2/3">
+        <div className="relative md:w-full lg:w-4/5">
           <Image
             fill={true}
             src={"/about-founder.png"}
