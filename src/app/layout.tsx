@@ -111,15 +111,18 @@ export default function RootLayout({
           </div>
           <nav className="flex flex-col gap-2">
             <p className="text-gray-500">Links</p>
-            <Link href={"/"}>Home</Link>
-            <Link href={"/about"}>About</Link>
-            <Link href={"/programs"}>Programs</Link>
-            <Link href={"/contact-us"}>Contact us</Link>
+            <Link href={"/"} className="hover:text-blue-400 transition-all">Home</Link>
+            <Link href={"/about"} className="hover:text-blue-400 transition-all">About</Link>
+            <Link href={"/programs"} className="hover:text-blue-400 transition-all">Programs</Link>
+            <Link href={"/contact-us"} className="hover:text-blue-400 transition-all">Contact us</Link>
           </nav>
           <nav className="flex flex-col gap-2">
             <p className="text-gray-500">Contact</p>
-            <a href="tel:000000000000">Phone:</a>
-            <a href="mailto:placeholder@email.com">Email:</a>
+            <a href="tel:2348033670081" className="hover:text-blue-400 transition-all">WhatsApp: +234-803-367-0081</a>
+            <a href="tel:2348060481919" className="hover:text-blue-400 transition-all">Phone: +234-806-048-1919</a>
+            <a href="mailto:deafinclusion2024@gmail.com" className="hover:text-blue-400 transition-all">
+              Email: deafinclusion2024@gmail.com
+            </a>
           </nav>
           <div className="absolute bottom-0 flex w-svw justify-center lg:relative lg:w-full lg:self-end">
             Designed and Developed by:&nbsp;
